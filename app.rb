@@ -8,7 +8,16 @@ require 'sinatra/reloader'
 
 
 # Routen /
-get '/' do
+get '/todo' do
+    db = SQLite3::Database.new("db/todos.db")
+
+    db.results_as_hash = true
+
+
+
+
+    
+
     slim(:index)
 end
 
